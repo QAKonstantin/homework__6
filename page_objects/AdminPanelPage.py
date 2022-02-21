@@ -1,5 +1,4 @@
 from selenium.webdriver.common.by import By
-import os
 from page_objects.BasePage import BasePage
 from page_objects.elements.AdminNavigation import AdminNavigation
 
@@ -20,10 +19,10 @@ class AdminPanel(BasePage):
     BUTTON_FILTER = (By.CSS_SELECTOR, "#button-filter")
     PRODUCT_CHECKBOX = (By.CSS_SELECTOR, "input[type='checkbox']")
     ALERT = (By.CSS_SELECTOR, "i[class='fa fa-check-circle']")
-    INPUT_FORM = (By.CSS_SELECTOR, "[class='input-group']")
+    INPUT_FORM = (By.CSS_SELECTOR, ".input-group")
     BUTTON_LOGIN = (By.CSS_SELECTOR, "[class='btn btn-primary']")
-    HELP = (By.CSS_SELECTOR, "[class='help-block']")
-    PANEL_BODY = (By.CSS_SELECTOR, "[class='panel-body']")
+    HELP = (By.CSS_SELECTOR, ".help-block")
+    PANEL_BODY = (By.CSS_SELECTOR, ".panel-body")
     PANEL_HEAD = (By.CLASS_NAME, "panel-heading")
 
     def login_with(self, username, password):

@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -7,15 +9,16 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 class BasePage:
     FOOTER = (By.ID, "footer")
-    BREAD_CRUMBS = (By.CSS_SELECTOR, "[class='breadcrumb']")
-    SEARCH = (By.CSS_SELECTOR, "[id='search']")
-    ITEMS = (By.CSS_SELECTOR, "[id='cart-total']")
+    BREAD_CRUMBS = (By.CSS_SELECTOR, ".breadcrumb")
+    SEARCH = (By.CSS_SELECTOR, "#search")
+    ITEMS = (By.CSS_SELECTOR, "#cart-total")
     LOGO = (By.ID, "logo")
     CONTENT = (By.ID, "content")
-    TOP = (By.CSS_SELECTOR, "[id='top']")
+    TOP = (By.CSS_SELECTOR, "#top")
 
     def __init__(self, browser):
         self.browser = browser
+        load_dotenv()
 
     def _input_text(self, web_element, text):
         web_element.clear()

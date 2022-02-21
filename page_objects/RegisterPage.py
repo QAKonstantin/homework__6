@@ -3,8 +3,6 @@ import os
 from dotenv import load_dotenv
 from page_objects.BasePage import BasePage
 
-load_dotenv()
-
 
 class RegisterPage(BasePage):
     INPUT_FIRSTNAME = (By.ID, "input-firstname")
