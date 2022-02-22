@@ -6,7 +6,7 @@ from selenium import webdriver
 
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="chrome")
-    parser.addoption("--url", action="store", default="https://demo.opencart.com")  #http://192.168.0.102:8081
+    parser.addoption("--url", action="store", default="http://192.168.0.100:8081")  #https://demo.opencart.com
     parser.addoption("--drivers", action="store", default=os.path.expanduser("C:/drivers1"))
 
 

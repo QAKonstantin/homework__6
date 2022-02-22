@@ -3,7 +3,7 @@ import os
 
 
 def test_add_delete_product(browser):
-    AdminPanel(browser).login_with("admin", os.getenv("admin_password"))
+    AdminPanel(browser).login_with("user", os.getenv("admin_password"))
     AdminPanel(browser).add_product(product_name="Test_name", model="Test_model", tag="test")
     AdminPanel(browser).delete_product(product_name="Test_name")
 
